@@ -1,0 +1,30 @@
+## Docker commands used to build the application 
+# TODO: insert the docker build command
+
+## Docker commands used to run the application
+# TODO: insert the docker run command
+
+## Docker commands used to get the application logs
+# TODO: insert the docker logs command
+
+docker run -d -p 7111:3111 4edb0d23c94932877141d15245e84351fdeddd8e997bdc01c3a4a64934ef7796 techtrends_logs.txt
+
+## Logs from the container running the TechTrends application
+# TODO: paste logs from the Docker container 
+
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.32.135:3111
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 132-593-283
+INFO:app:healthz request successfull
+INFO:werkzeug:127.0.0.1 - - [09/Apr/2024 15:42:16] "GET /healthz HTTP/1.1" 200 -
+INFO:root:About Us page retrieved!
+INFO:werkzeug:127.0.0.1 - - [09/Apr/2024 15:43:44] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Apr/2024 15:43:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Metrics request successfull
+INFO:werkzeug:127.0.0.1 - - [09/Apr/2024 15:43:51] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Apr/2024 15:44:01] "[33mGET /motfor HTTP/1.1[0m" 404 -
