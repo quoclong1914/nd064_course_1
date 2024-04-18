@@ -21,7 +21,7 @@ jobs:
           context: .
           file: ./projects/Dockerfile
           push: true
-          tags: techtrends:latest
+          tags: quoclong/ techtrends
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
