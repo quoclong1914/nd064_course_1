@@ -16,6 +16,15 @@ from werkzeug.exceptions import abort
 # Global variable to track connection count
 connection_count = 0
 
+# Define the Flask application
+app = Flask(__name__)
+app.config["ENV"] = "development"
+
+# Configure logging to output to stdout
+logging.basicConfig(
+    level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
@@ -41,11 +50,6 @@ def get_db_post_count():
     post_count = cursor.fetchone()[0]
     connection.close()
     return post_count
-
-
-# Define the Flask application
-app = Flask(__name__)
-app.config["SECRET_KEY"] = "your secret key"
 
 
 # Define the main route of the web application
@@ -145,5 +149,4 @@ def metrics():
 if __name__ == "__main__":
 
     ## stream logs to app.log file
-    logging.basicConfig(filename="app.log", level=logging.DEBUG)
-    app.run(host="0.0.0.0", port="3111", debug=True)
+    app.run(host="0.0.0.0", port="3111")

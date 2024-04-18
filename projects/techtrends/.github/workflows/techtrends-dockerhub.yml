@@ -18,7 +18,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: techtrends:latest
+          tags: quoclong/techtrends:v1.0
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}

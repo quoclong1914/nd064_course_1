@@ -15,7 +15,7 @@ COPY ./techtrends/requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code into the container at /app
-COPY ./techtrends/. .
+COPY ./techtrends/ .
 
 # Run the database initialization script
 RUN python init_db.py
