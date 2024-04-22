@@ -5,8 +5,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/quoclong1914/nd064_course_1/projects
-    path: helm/templates
+    repoURL: https://github.com/quoclong1914/nd064_course_1
+    path: projects/helm
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
