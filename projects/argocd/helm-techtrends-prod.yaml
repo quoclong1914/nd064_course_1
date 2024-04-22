@@ -6,7 +6,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/quoclong1914/nd064_course_1
-    path: projects/helm
+    path: helm
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'

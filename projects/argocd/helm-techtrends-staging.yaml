@@ -5,15 +5,16 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/quoclong1914/nd064_course_1
-    path: projects/helm
-    targetRevision: HEAD
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: staging
-  helm:
+    helm:
     valuesFiles:
       - values-staging.yaml
     releaseName: techtrends-staging
     chart: techtrends
     version: 1.0.0
+    repoURL: https://github.com/quoclong1914/nd064_course_1
+    path: helm
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: staging
+  
