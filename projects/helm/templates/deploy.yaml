@@ -1,10 +1,10 @@
-apiVersion: apps/v1
+apiVersion: argoproj.io/v1alpha1
 kind: Deployment
 metadata:
   name: techtrends
-  namespace: sandbox
+  namespace: {{ .Values.namespace.name }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: techtrends
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: techtrends
-        image: techtrends:latest
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         resources:
           requests:
             cpu: "250m"

@@ -5,7 +5,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/quoclong1914/nd064_course_1
+    repoURL: https://github.com/quoclong1914/nd064_course_1/projects
     path: helm
     targetRevision: HEAD
   destination:
