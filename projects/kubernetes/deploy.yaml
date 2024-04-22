@@ -14,8 +14,9 @@ spec:
         app: techtrends
     spec:
       containers:
-      - name: techtrends
-        image: techtrends:latest
+      - image: quoclong/techtrends:lastest
+        imagePullPolicy: IfNotPresent
+        name: techtrends
         resources:
           requests:
             cpu: "250m"
@@ -33,3 +34,10 @@ spec:
           httpGet:
             path: /healthz
             port: 3111
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
