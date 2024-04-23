@@ -26,6 +26,7 @@ spec:
             memory: "128Mi"
         ports:
         - containerPort: 3111
+          protocol: TCP
         livenessProbe:
           httpGet:
             path: /healthz
